@@ -8,8 +8,8 @@ data:
   dataset:
     subdir: dataset
     val_test_split:
-      val: 0.7
-      test: 0.3
+      val: 0.75
+      test: 0.25
 
 train:
   batch_size: 32
