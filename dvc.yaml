@@ -37,7 +37,12 @@ stages:
       - scripts/evaluate.py
       - data/dataset/test
       - data/train/model
-    outs:
-      - data/evaluation/predictions.csv
     metrics:
-      - data/evaluation/metrics.json
+      - data/evaluation/metrics.json:
+          cache: false
+    plots:
+      - data/evaluation/predictions.csv:
+          template: confusion
+          x: true_label
+          y: predicted_label
+          title: Confusion Matrix
