@@ -1,0 +1,77 @@
+schema: '2.0'
+stages:
+  download_dataset:
+    cmd: ( wget https://storage.googleapis.com/mledu-datasets/cats_and_dogs_filtered.zip
+      -O cats_and_dogs_filtered.zip && unzip cats_and_dogs_filtered.zip -d data/raw
+      && rm cats_and_dogs_filtered.zip )
+    outs:
+    - path: data/raw
+      md5: 174fe7fcb400140a007ac05c36b5bfd4.dir
+      size: 68556316
+      nfiles: 3001
+  split_dataset:
+    cmd: python scripts/split_dataset.py
+    deps:
+    - path: data/raw
+      md5: 174fe7fcb400140a007ac05c36b5bfd4.dir
+      size: 68556316
+      nfiles: 3001
+    - path: scripts/split_dataset.py
+      md5: f6e3df648027d4d133d2fd4cf424f5bd
+      size: 1280
+    outs:
+    - path: data/dataset/test
+      md5: b9f05e76d3970ba4a54bf5e49026f293.dir
+      size: 6969984
+      nfiles: 309
+    - path: data/dataset/train
+      md5: 0a1a83aa537b94b2b07eb1503701eca7.dir
+      size: 45613376
+      nfiles: 2000
+    - path: data/dataset/val
+      md5: 6508b7bcfe06b73bb8d99b135de1a7e3.dir
+      size: 15972816
+      nfiles: 691
+  train:
+    cmd: python scripts/train.py
+    deps:
+    - path: data/dataset/train
+      md5: 0a1a83aa537b94b2b07eb1503701eca7.dir
+      size: 45613376
+      nfiles: 2000
+    - path: data/dataset/val
+      md5: 6508b7bcfe06b73bb8d99b135de1a7e3.dir
+      size: 15972816
+      nfiles: 691
+    - path: scripts/train.py
+      md5: d58eb83091411cc71720c8f29f8c616b
+      size: 2965
+    outs:
+    - path: data/train/best_weights.h5
+      md5: c81d2c360a828f7024cf97c5675c4559
+      size: 172691232
+    - path: data/train/model
+      md5: 6670eda8f9803bcc61d9f43cf77b9aa5.dir
+      size: 177410678
+      nfiles: 3
+  evaluate:
+    cmd: python scripts/evaluate.py
+    deps:
+    - path: data/dataset/test
+      md5: b9f05e76d3970ba4a54bf5e49026f293.dir
+      size: 6969984
+      nfiles: 309
+    - path: data/train/model
+      md5: 6670eda8f9803bcc61d9f43cf77b9aa5.dir
+      size: 177410678
+      nfiles: 3
+    - path: scripts/evaluate.py
+      md5: 64d556e6f4f7cbfc030fc7e459c0ae3e
+      size: 1377
+    outs:
+    - path: data/evaluation/metrics.json
+      md5: 850481ba4bb2e88517c625be81fd8c1d
+      size: 56
+    - path: data/evaluation/predictions.csv
+      md5: 7b81690b8d0253cde7178f61e023dfc3
+      size: 21972
