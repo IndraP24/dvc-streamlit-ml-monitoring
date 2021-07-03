@@ -1,6 +1,6 @@
 tensorflow
 streamlit
-'dvc[gdrive]'
+dvc[gdrive]
 dvclive
 numpy
 pandas
@@ -9,3 +9,4 @@ requests
 six
 tqdm
 scripts
+GitPython
