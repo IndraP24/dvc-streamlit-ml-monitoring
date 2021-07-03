@@ -5,38 +5,53 @@ stages:
         -O cats_and_dogs_filtered.zip &&
         unzip cats_and_dogs_filtered.zip -d data/raw &&
         rm cats_and_dogs_filtered.zip
-      )
+      ) &> logs/download_dataset.out
     
     outs: 
       - data/raw
+      - logs/download_dataset.out
   
   split_dataset:
-    cmd: python scripts/split_dataset.py
+    cmd: python scripts/split_dataset.py &> logs/split_dataset.out
     deps:
       - scripts/split_dataset.py
       - data/raw
-    outs: 
+    params:
+      - data.dataset.val_test_split
+    outs:
+      - data/dataset/dataset.csv
       - data/dataset/train
       - data/dataset/val
       - data/dataset/test
+      - logs/split_dataset.out
   
 
   train:
-    cmd: python scripts/train.py
+    cmd: python scripts/train.py &> logs/train.out
     deps:
       - scripts/train.py
       - data/dataset/train
       - data/dataset/val
+    params:
+      - train
+      - model
     outs:
       - data/train/best_weights.h5
       - data/train/model
+      - logs/train.out
+    live:
+      data/train/training_metrics:
+        summary: true
+        html: true
   
   evaluate:
-    cmd: python scripts/evaluate.py
+    cmd: python scripts/evaluate.py &> logs/evaluate.out
     deps:
       - scripts/evaluate.py
       - data/dataset/test
       - data/train/model
+    outs:
+      - logs/evaluate.out
     metrics:
       - data/evaluation/metrics.json:
           cache: false
