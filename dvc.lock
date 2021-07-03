@@ -3,14 +3,17 @@ stages:
   download_dataset:
     cmd: ( wget https://storage.googleapis.com/mledu-datasets/cats_and_dogs_filtered.zip
       -O cats_and_dogs_filtered.zip && unzip cats_and_dogs_filtered.zip -d data/raw
-      && rm cats_and_dogs_filtered.zip )
+      && rm cats_and_dogs_filtered.zip ) &> logs/download_dataset.out
     outs:
     - path: data/raw
       md5: 174fe7fcb400140a007ac05c36b5bfd4.dir
       size: 68556316
       nfiles: 3001
+    - path: logs/download_dataset.out
+      md5: 6c4991c04e76f0534dd1d5715958fff5
+      size: 319108
   split_dataset:
-    cmd: python scripts/split_dataset.py
+    cmd: python scripts/split_dataset.py &> logs/split_dataset.out
     deps:
     - path: data/raw
       md5: 174fe7fcb400140a007ac05c36b5bfd4.dir
@@ -19,50 +22,84 @@ stages:
     - path: scripts/split_dataset.py
       md5: f6e3df648027d4d133d2fd4cf424f5bd
       size: 1280
+    params:
+      params.yaml:
+        data.dataset.val_test_split:
+          val: 0.75
+          test: 0.25
     outs:
+    - path: data/dataset/dataset.csv
+      md5: 919a173c3bb4c13359a44d0e25708052
+      size: 68039
     - path: data/dataset/test
-      md5: b9f05e76d3970ba4a54bf5e49026f293.dir
-      size: 6969984
-      nfiles: 309
+      md5: f6a27c7860315a5b5d8863a570e3ddcd.dir
+      size: 5548316
+      nfiles: 236
     - path: data/dataset/train
       md5: 0a1a83aa537b94b2b07eb1503701eca7.dir
       size: 45613376
       nfiles: 2000
     - path: data/dataset/val
-      md5: 6508b7bcfe06b73bb8d99b135de1a7e3.dir
-      size: 15972816
-      nfiles: 691
+      md5: 7059fc8e379dcd1e49371dea682c41b1.dir
+      size: 17394484
+      nfiles: 764
+    - path: logs/split_dataset.out
+      md5: f89af6fa128a69f87df3be5aef011a16
+      size: 1501
   train:
-    cmd: python scripts/train.py
+    cmd: python scripts/train.py &> logs/train.out
     deps:
     - path: data/dataset/train
       md5: 0a1a83aa537b94b2b07eb1503701eca7.dir
       size: 45613376
       nfiles: 2000
     - path: data/dataset/val
-      md5: 6508b7bcfe06b73bb8d99b135de1a7e3.dir
-      size: 15972816
-      nfiles: 691
+      md5: 7059fc8e379dcd1e49371dea682c41b1.dir
+      size: 17394484
+      nfiles: 764
     - path: scripts/train.py
       md5: a24138a230b6ca50e6f001a53ff3b008
       size: 2964
+    params:
+      params.yaml:
+        model:
+          backbone: tensorflow.keras.applications.ResNet50
+          preprocess_input: tensorflow.keras.applications.resnet50.preprocess_input
+        train:
+          batch_size: 32
+          img_size:
+          - 160
+          - 160
+          learning_rate: 0.0001
+          subdir: train
+          epochs:
+            frozen: 10
+            unfrozen: 15
+          fine_tune_at: 100
     outs:
     - path: data/train/best_weights.h5
-      md5: 998e96fe1bc19534803dd93ddc6dde13
+      md5: 605d79df7148e5ab440522e93659434f
       size: 172691232
     - path: data/train/model
-      md5: 84f3de352d847527dd0ba3e53cb5ce29.dir
+      md5: f4e0e212569bb8243d4869f7bc0b7837.dir
       size: 177410678
       nfiles: 3
+    - path: data/train/training_metrics
+      md5: e17a3c8d96bb98150a9f6c9d4d7915b7.dir
+      size: 3787
+      nfiles: 4
+    - path: logs/train.out
+      md5: 36d386f995f68e206a66d546468c17f6
+      size: 275423
   evaluate:
-    cmd: python scripts/evaluate.py
+    cmd: python scripts/evaluate.py &> logs/evaluate.out
     deps:
     - path: data/dataset/test
-      md5: b9f05e76d3970ba4a54bf5e49026f293.dir
-      size: 6969984
-      nfiles: 309
+      md5: f6a27c7860315a5b5d8863a570e3ddcd.dir
+      size: 5548316
+      nfiles: 236
     - path: data/train/model
-      md5: 84f3de352d847527dd0ba3e53cb5ce29.dir
+      md5: f4e0e212569bb8243d4869f7bc0b7837.dir
       size: 177410678
       nfiles: 3
     - path: scripts/evaluate.py
@@ -70,8 +107,11 @@ stages:
       size: 1377
     outs:
     - path: data/evaluation/metrics.json
-      md5: 950e8e08cddfbb2abe6ee88422e2e997
+      md5: 53a50a83aea4b2a6779dac8c89200f75
       size: 56
     - path: data/evaluation/predictions.csv
-      md5: e43c7948de9b70d6914d20568a89ac81
-      size: 21959
+      md5: 6b4a61e66ff5029bb30882ee8e35c1db
+      size: 16300
+    - path: logs/evaluate.out
+      md5: 0671f5404728a7ff59e26cecc95776ab
+      size: 6520
