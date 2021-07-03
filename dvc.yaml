@@ -1,0 +1,43 @@
+stages:
+  download_dataset:
+    cmd: (
+        wget https://storage.googleapis.com/mledu-datasets/cats_and_dogs_filtered.zip
+        -O cats_and_dogs_filtered.zip &&
+        unzip cats_and_dogs_filtered.zip -d data/raw &&
+        rm cats_and_dogs_filtered.zip
+      )
+    
+    outs: 
+      - data/raw
+  
+  split_dataset:
+    cmd: python scripts/split_dataset.py
+    deps:
+      - scripts/split_dataset.py
+      - data/raw
+    outs: 
+      - data/dataset/train
+      - data/dataset/val
+      - data/dataset/test
+  
+
+  train:
+    cmd: python scripts/train.py
+    deps:
+      - scripts/train.py
+      - data/dataset/train
+      - data/dataset/val
+    outs:
+      - data/train/best_weights.h5
+      - data/train/model
+  
+  evaluate:
+    cmd: python scripts/evaluate.py
+    deps:
+      - scripts/evaluate.py
+      - data/dataset/test
+      - data/train/model
+    outs:
+      - data/evaluation/predictions.csv
+    metrics:
+      - data/evaluation/metrics.json
