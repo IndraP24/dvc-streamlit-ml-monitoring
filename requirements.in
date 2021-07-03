@@ -1,0 +1,11 @@
+tensorflow
+streamlit
+'dvc[gdrive]'
+dvclive
+numpy
+pandas
+Pillow
+requests
+six
+tqdm
+scripts
