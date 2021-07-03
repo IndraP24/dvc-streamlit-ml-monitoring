@@ -70,7 +70,7 @@ callbacks = [
 base_model.trainable = False
 
 model.compile(
-    optimizer=tf.keras.optimizers.Adam(lr=LEARNING_RATE),
+    optimizer=tf.keras.optimizers.SGD(lr=LEARNING_RATE),
     loss = tf.keras.losses.BinaryCrossentropy(from_logits=True),
     metrics = ['accuracy'],
 )
