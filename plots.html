@@ -1,0 +1,2012 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DVC Plot</title>
+    <script src="https://cdn.jsdelivr.net/npm/vega@5.10.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.8.1"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.5.1"></script>
+</head>
+<body>
+    <div id = "plot0"></div>
+<script type = "text/javascript">
+    var spec = {
+    "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+    "data": {
+        "values": [
+    {
+        "image_name": "cat.2000.jpg",
+        "image_path": "data/dataset/test/cats/cat.2000.jpg",
+        "predicted_label": "cats",
+        "prediction": "2.5056346e-09",
+        "rev": "workspace",
+        "true_label": "cats"
+    },
+    {
+        "image_name": "cat.2006.jpg",
+        "image_path": "data/dataset/test/cats/cat.2006.jpg",
+        "predicted_label": "cats",
+        "prediction": "0.019715555",
+        "rev": "workspace",
+        "true_label": "cats"
+    },
+    {
+        "image_name": "cat.2008.jpg",
+        "image_path": "data/dataset/test/cats/cat.2008.jpg",
+        "predicted_label": "cats",
+        "prediction": "7.502029e-10",
+        "rev": "workspace",
+        "true_label": "cats"
+    },
+    {
+        "image_name": "cat.2021.jpg",
+        "image_path": "data/dataset/test/cats/cat.2021.jpg",
+        "predicted_label": "cats",
+        "prediction": "0.0002971012",
+        "rev": "workspace",
+        "true_label": "cats"
+    },
+    {
+        "image_name": "cat.2026.jpg",
+        "image_path": "data/dataset/test/cats/cat.2026.jpg",
+        "predicted_label": "cats",
+        "prediction": "6.0573013e-10",
+        "rev": "workspace",
+        "true_label": "cats"
+    },
+    {
+        "image_name": "cat.2028.jpg",
+        "image_path": "data/dataset/test/cats/cat.2028.jpg",
+        "predicted_label": "cats",
+        "prediction": "2.3375228e-09",
+        "rev": "workspace",
+        "true_label": "cats"
+    },
+    {
+        "image_name": "cat.2031.jpg",
+        "image_path": "data/dataset/test/cats/cat.2031.jpg",
+        "predicted_label": "cats",
+        "prediction": "8.2883084e-10",
+        "rev": "workspace",
+        "true_label": "cats"
+    },
+    {
+        "image_name": "cat.2041.jpg",
+        "image_path": "data/dataset/test/cats/cat.2041.jpg",
+        "predicted_label": "cats",
+        "prediction": "4.1035472e-07",
+        "rev": "workspace",
+        "true_label": "cats"
+    },
+    {
+        "image_name": "cat.2042.jpg",
+        "image_path": "data/dataset/test/cats/cat.2042.jpg",
+        "predicted_label": "cats",
+        "prediction": "2.5719923e-12",
+        "rev": "workspace",
+        "true_label": "cats"
+    },
+    {
+        "image_name": "cat.2047.jpg",
+        "image_path": "data/dataset/test/cats/cat.2047.jpg",
+        "predicted_label": "cats",
+        "prediction": "0.049532443",
+        "rev": "workspace",
+        "true_label": "cats"
+    },
+    {
+        "image_name": "cat.2054.jpg",
+        "image_path": "data/dataset/test/cats/cat.2054.jpg",
+        "predicted_label": "cats",
+        "prediction": "2.4260917e-12",
+        "rev": "workspace",
+        "true_label": "cats"
+    },
+    {
+        "image_name": "cat.2059.jpg",
+        "image_path": "data/dataset/test/cats/cat.2059.jpg",
+        "predicted_label": "cats",
+        "prediction": "2.0503903e-09",
+        "rev": "workspace",
+        "true_label": "cats"
+    },
+    {
+        "image_name": "cat.2062.jpg",
+        "image_path": "data/dataset/test/cats/cat.2062.jpg",
+        "predicted_label": "cats",
+        "prediction": "5.0515894e-12",
+        "rev": "workspace",
+        "true_label": "cats"
+    },
+    {
+        "image_name": "cat.2063.jpg",
+        "image_path": "data/dataset/test/cats/cat.2063.jpg",
+        "predicted_label": "cats",
+        "prediction": "4.8354457e-07",
+        "rev": "workspace",
+        "true_label": "cats"
+    },
+    {
+        "image_name": "cat.2065.jpg",
+        "image_path": "data/dataset/test/cats/cat.2065.jpg",
+        "predicted_label": "cats",
+        "prediction": "1.9896578e-07",
+        "rev": "workspace",
+        "true_label": "cats"
+    },
+    {
+        "image_name": "cat.2066.jpg",
+        "image_path": "data/dataset/test/cats/cat.2066.jpg",
+        "predicted_label": "cats",
+        "prediction": "4.8113113e-09",
+        "rev": "workspace",
+        "true_label": "cats"
+    },
+    {
+        "image_name": "cat.2071.jpg",
+        "image_path": "data/dataset/test/cats/cat.2071.jpg",
+        "predicted_label": "cats",
+        "prediction": "4.2989377e-08",
+        "rev": "workspace",
+        "true_label": "cats"
+    },
+    {
+        "image_name": "cat.2072.jpg",
+        "image_path": "data/dataset/test/cats/cat.2072.jpg",
+        "predicted_label": "cats",
+        "prediction": "0.0025875927",
+        "rev": "workspace",
+        "true_label": "cats"
+    },
+    {
+        "image_name": "cat.2073.jpg",
+        "image_path": "data/dataset/test/cats/cat.2073.jpg",
+        "predicted_label": "cats",
+        "prediction": "3.0148242e-09",
+        "rev": "workspace",
+        "true_label": "cats"
+    },
+    {
+        "image_name": "cat.2084.jpg",
+        "image_path": "data/dataset/test/cats/cat.2084.jpg",
+        "predicted_label": "cats",
+        "prediction": "6.215292e-08",
+        "rev": "workspace",
+        "true_label": "cats"
+    },
+    {
+        "image_name": "cat.2088.jpg",
+        "image_path": "data/dataset/test/cats/cat.2088.jpg",
+        "predicted_label": "cats",
+        "prediction": "6.4479915e-09",
+        "rev": "workspace",
+        "true_label": "cats"
+    },
+    {
+        "image_name": "cat.2090.jpg",
+        "image_path": "data/dataset/test/cats/cat.2090.jpg",
+        "predicted_label": "cats",
+        "prediction": "3.089539e-10",
+        "rev": "workspace",
+        "true_label": "cats"
+    },
+    {
+        "image_name": "cat.2096.jpg",
+        "image_path": "data/dataset/test/cats/cat.2096.jpg",
+        "predicted_label": "cats",
+        "prediction": "5.3720635e-07",
+        "rev": "workspace",
+        "true_label": "cats"
+    },
+    {
+        "image_name": "cat.2097.jpg",
+        "image_path": "data/dataset/test/cats/cat.2097.jpg",
+        "predicted_label": "cats",
+        "prediction": "1.7569782e-10",
+        "rev": "workspace",
+        "true_label": "cats"
+    },
+    {
+        "image_name": "cat.2102.jpg",
+        "image_path": "data/dataset/test/cats/cat.2102.jpg",
+        "predicted_label": "cats",
+        "prediction": "1.145344e-09",
+        "rev": "workspace",
+        "true_label": "cats"
+    },
+    {
+        "image_name": "cat.2105.jpg",
+        "image_path": "data/dataset/test/cats/cat.2105.jpg",
+        "predicted_label": "cats",
+        "prediction": "4.1774598e-10",
+        "rev": "workspace",
+        "true_label": "cats"
+    },
+    {
+        "image_name": "cat.2115.jpg",
+        "image_path": "data/dataset/test/cats/cat.2115.jpg",
+        "predicted_label": "cats",
+        "prediction": "3.6468226e-10",
+        "rev": "workspace",
+        "true_label": "cats"
+    },
+    {
+        "image_name": "cat.2120.jpg",
+        "image_path": "data/dataset/test/cats/cat.2120.jpg",
+        "predicted_label": "cats",
+        "prediction": "6.2003436e-10",
+        "rev": "workspace",
+        "true_label": "cats"
+    },
+    {
+        "image_name": "cat.2123.jpg",
+        "image_path": "data/dataset/test/cats/cat.2123.jpg",
+        "predicted_label": "cats",
+        "prediction": "1.7366617e-06",
+        "rev": "workspace",
+        "true_label": "cats"
+    },
+    {
+        "image_name": "cat.2124.jpg",
+        "image_path": "data/dataset/test/cats/cat.2124.jpg",
+        "predicted_label": "cats",
+        "prediction": "1.9133093e-07",
+        "rev": "workspace",
+        "true_label": "cats"
+    },
+    {
+        "image_name": "cat.2127.jpg",
+        "image_path": "data/dataset/test/cats/cat.2127.jpg",
+        "predicted_label": "cats",
+        "prediction": "8.991021e-07",
+        "rev": "workspace",
+        "true_label": "cats"
+    },
+    {
+        "image_name": "cat.2131.jpg",
+        "image_path": "data/dataset/test/cats/cat.2131.jpg",
+        "predicted_label": "cats",
+        "prediction": "5.0968158e-12",
+        "rev": "workspace",
+        "true_label": "cats"
+    },
+    {
+        "image_name": "cat.2134.jpg",
+        "image_path": "data/dataset/test/cats/cat.2134.jpg",
+        "predicted_label": "cats",
+        "prediction": "1.8815914e-08",
+        "rev": "workspace",
+        "true_label": "cats"
+    },
+    {
+        "image_name": "cat.2137.jpg",
+        "image_path": "data/dataset/test/cats/cat.2137.jpg",
+        "predicted_label": "cats",
+        "prediction": "3.781913e-09",
+        "rev": "workspace",
+        "true_label": "cats"
+    },
+    {
+        "image_name": "cat.2139.jpg",
+        "image_path": "data/dataset/test/cats/cat.2139.jpg",
+        "predicted_label": "cats",
+        "prediction": "5.916121e-07",
+        "rev": "workspace",
+        "true_label": "cats"
+    },
+    {
+        "image_name": "cat.2143.jpg",
+        "image_path": "data/dataset/test/cats/cat.2143.jpg",
+        "predicted_label": "cats",
+        "prediction": "7.549103e-08",
+        "rev": "workspace",
+        "true_label": "cats"
+    },
+    {
+        "image_name": "cat.2144.jpg",
+        "image_path": "data/dataset/test/cats/cat.2144.jpg",
+        "predicted_label": "cats",
+        "prediction": "1.0141686e-10",
+        "rev": "workspace",
+        "true_label": "cats"
+    },
+    {
+        "image_name": "cat.2145.jpg",
+        "image_path": "data/dataset/test/cats/cat.2145.jpg",
+        "predicted_label": "cats",
+        "prediction": "6.2839156e-08",
+        "rev": "workspace",
+        "true_label": "cats"
+    },
+    {
+        "image_name": "cat.2155.jpg",
+        "image_path": "data/dataset/test/cats/cat.2155.jpg",
+        "predicted_label": "cats",
+        "prediction": "8.6712824e-08",
+        "rev": "workspace",
+        "true_label": "cats"
+    },
+    {
+        "image_name": "cat.2159.jpg",
+        "image_path": "data/dataset/test/cats/cat.2159.jpg",
+        "predicted_label": "cats",
+        "prediction": "4.253981e-06",
+        "rev": "workspace",
+        "true_label": "cats"
+    },
+    {
+        "image_name": "cat.2163.jpg",
+        "image_path": "data/dataset/test/cats/cat.2163.jpg",
+        "predicted_label": "cats",
+        "prediction": "9.748911e-10",
+        "rev": "workspace",
+        "true_label": "cats"
+    },
+    {
+        "image_name": "cat.2165.jpg",
+        "image_path": "data/dataset/test/cats/cat.2165.jpg",
+        "predicted_label": "cats",
+        "prediction": "3.7458676e-09",
+        "rev": "workspace",
+        "true_label": "cats"
+    },
+    {
+        "image_name": "cat.2167.jpg",
+        "image_path": "data/dataset/test/cats/cat.2167.jpg",
+        "predicted_label": "cats",
+        "prediction": "0.0005961248",
+        "rev": "workspace",
+        "true_label": "cats"
+    },
+    {
+        "image_name": "cat.2172.jpg",
+        "image_path": "data/dataset/test/cats/cat.2172.jpg",
+        "predicted_label": "cats",
+        "prediction": "2.5974989e-09",
+        "rev": "workspace",
+        "true_label": "cats"
+    },
+    {
+        "image_name": "cat.2182.jpg",
+        "image_path": "data/dataset/test/cats/cat.2182.jpg",
+        "predicted_label": "cats",
+        "prediction": "4.0155493e-05",
+        "rev": "workspace",
+        "true_label": "cats"
+    },
+    {
+        "image_name": "cat.2185.jpg",
+        "image_path": "data/dataset/test/cats/cat.2185.jpg",
+        "predicted_label": "cats",
+        "prediction": "0.062263317",
+        "rev": "workspace",
+        "true_label": "cats"
+    },
+    {
+        "image_name": "cat.2192.jpg",
+        "image_path": "data/dataset/test/cats/cat.2192.jpg",
+        "predicted_label": "cats",
+        "prediction": "5.8105416e-06",
+        "rev": "workspace",
+        "true_label": "cats"
+    },
+    {
+        "image_name": "cat.2194.jpg",
+        "image_path": "data/dataset/test/cats/cat.2194.jpg",
+        "predicted_label": "cats",
+        "prediction": "4.840786e-09",
+        "rev": "workspace",
+        "true_label": "cats"
+    },
+    {
+        "image_name": "cat.2196.jpg",
+        "image_path": "data/dataset/test/cats/cat.2196.jpg",
+        "predicted_label": "cats",
+        "prediction": "4.7836345e-08",
+        "rev": "workspace",
+        "true_label": "cats"
+    },
+    {
+        "image_name": "cat.2198.jpg",
+        "image_path": "data/dataset/test/cats/cat.2198.jpg",
+        "predicted_label": "cats",
+        "prediction": "1.7668435e-05",
+        "rev": "workspace",
+        "true_label": "cats"
+    },
+    {
+        "image_name": "cat.2199.jpg",
+        "image_path": "data/dataset/test/cats/cat.2199.jpg",
+        "predicted_label": "cats",
+        "prediction": "1.6258399e-08",
+        "rev": "workspace",
+        "true_label": "cats"
+    },
+    {
+        "image_name": "cat.2207.jpg",
+        "image_path": "data/dataset/test/cats/cat.2207.jpg",
+        "predicted_label": "dogs",
+        "prediction": "0.9928307",
+        "rev": "workspace",
+        "true_label": "cats"
+    },
+    {
+        "image_name": "cat.2214.jpg",
+        "image_path": "data/dataset/test/cats/cat.2214.jpg",
+        "predicted_label": "cats",
+        "prediction": "5.4369326e-10",
+        "rev": "workspace",
+        "true_label": "cats"
+    },
+    {
+        "image_name": "cat.2226.jpg",
+        "image_path": "data/dataset/test/cats/cat.2226.jpg",
+        "predicted_label": "cats",
+        "prediction": "6.1210864e-10",
+        "rev": "workspace",
+        "true_label": "cats"
+    },
+    {
+        "image_name": "cat.2228.jpg",
+        "image_path": "data/dataset/test/cats/cat.2228.jpg",
+        "predicted_label": "cats",
+        "prediction": "3.2091802e-07",
+        "rev": "workspace",
+        "true_label": "cats"
+    },
+    {
+        "image_name": "cat.2240.jpg",
+        "image_path": "data/dataset/test/cats/cat.2240.jpg",
+        "predicted_label": "cats",
+        "prediction": "2.594548e-09",
+        "rev": "workspace",
+        "true_label": "cats"
+    },
+    {
+        "image_name": "cat.2241.jpg",
+        "image_path": "data/dataset/test/cats/cat.2241.jpg",
+        "predicted_label": "cats",
+        "prediction": "5.381468e-07",
+        "rev": "workspace",
+        "true_label": "cats"
+    },
+    {
+        "image_name": "cat.2242.jpg",
+        "image_path": "data/dataset/test/cats/cat.2242.jpg",
+        "predicted_label": "cats",
+        "prediction": "9.820731e-09",
+        "rev": "workspace",
+        "true_label": "cats"
+    },
+    {
+        "image_name": "cat.2253.jpg",
+        "image_path": "data/dataset/test/cats/cat.2253.jpg",
+        "predicted_label": "cats",
+        "prediction": "7.151063e-10",
+        "rev": "workspace",
+        "true_label": "cats"
+    },
+    {
+        "image_name": "cat.2255.jpg",
+        "image_path": "data/dataset/test/cats/cat.2255.jpg",
+        "predicted_label": "cats",
+        "prediction": "1.818212e-06",
+        "rev": "workspace",
+        "true_label": "cats"
+    },
+    {
+        "image_name": "cat.2263.jpg",
+        "image_path": "data/dataset/test/cats/cat.2263.jpg",
+        "predicted_label": "cats",
+        "prediction": "7.752969e-09",
+        "rev": "workspace",
+        "true_label": "cats"
+    },
+    {
+        "image_name": "cat.2264.jpg",
+        "image_path": "data/dataset/test/cats/cat.2264.jpg",
+        "predicted_label": "cats",
+        "prediction": "9.2960045e-06",
+        "rev": "workspace",
+        "true_label": "cats"
+    },
+    {
+        "image_name": "cat.2267.jpg",
+        "image_path": "data/dataset/test/cats/cat.2267.jpg",
+        "predicted_label": "cats",
+        "prediction": "0.00016985263",
+        "rev": "workspace",
+        "true_label": "cats"
+    },
+    {
+        "image_name": "cat.2272.jpg",
+        "image_path": "data/dataset/test/cats/cat.2272.jpg",
+        "predicted_label": "cats",
+        "prediction": "5.3158605e-10",
+        "rev": "workspace",
+        "true_label": "cats"
+    },
+    {
+        "image_name": "cat.2280.jpg",
+        "image_path": "data/dataset/test/cats/cat.2280.jpg",
+        "predicted_label": "cats",
+        "prediction": "7.752272e-05",
+        "rev": "workspace",
+        "true_label": "cats"
+    },
+    {
+        "image_name": "cat.2291.jpg",
+        "image_path": "data/dataset/test/cats/cat.2291.jpg",
+        "predicted_label": "cats",
+        "prediction": "2.3212281e-11",
+        "rev": "workspace",
+        "true_label": "cats"
+    },
+    {
+        "image_name": "cat.2295.jpg",
+        "image_path": "data/dataset/test/cats/cat.2295.jpg",
+        "predicted_label": "cats",
+        "prediction": "4.668281e-05",
+        "rev": "workspace",
+        "true_label": "cats"
+    },
+    {
+        "image_name": "cat.2296.jpg",
+        "image_path": "data/dataset/test/cats/cat.2296.jpg",
+        "predicted_label": "cats",
+        "prediction": "2.1454026e-10",
+        "rev": "workspace",
+        "true_label": "cats"
+    },
+    {
+        "image_name": "cat.2298.jpg",
+        "image_path": "data/dataset/test/cats/cat.2298.jpg",
+        "predicted_label": "cats",
+        "prediction": "2.9589015e-11",
+        "rev": "workspace",
+        "true_label": "cats"
+    },
+    {
+        "image_name": "cat.2302.jpg",
+        "image_path": "data/dataset/test/cats/cat.2302.jpg",
+        "predicted_label": "cats",
+        "prediction": "9.223198e-11",
+        "rev": "workspace",
+        "true_label": "cats"
+    },
+    {
+        "image_name": "cat.2308.jpg",
+        "image_path": "data/dataset/test/cats/cat.2308.jpg",
+        "predicted_label": "cats",
+        "prediction": "4.3949556e-11",
+        "rev": "workspace",
+        "true_label": "cats"
+    },
+    {
+        "image_name": "cat.2309.jpg",
+        "image_path": "data/dataset/test/cats/cat.2309.jpg",
+        "predicted_label": "cats",
+        "prediction": "5.659316e-06",
+        "rev": "workspace",
+        "true_label": "cats"
+    },
+    {
+        "image_name": "cat.2313.jpg",
+        "image_path": "data/dataset/test/cats/cat.2313.jpg",
+        "predicted_label": "cats",
+        "prediction": "1.828879e-10",
+        "rev": "workspace",
+        "true_label": "cats"
+    },
+    {
+        "image_name": "cat.2315.jpg",
+        "image_path": "data/dataset/test/cats/cat.2315.jpg",
+        "predicted_label": "cats",
+        "prediction": "6.2666444e-08",
+        "rev": "workspace",
+        "true_label": "cats"
+    },
+    {
+        "image_name": "cat.2316.jpg",
+        "image_path": "data/dataset/test/cats/cat.2316.jpg",
+        "predicted_label": "cats",
+        "prediction": "2.0945674e-06",
+        "rev": "workspace",
+        "true_label": "cats"
+    },
+    {
+        "image_name": "cat.2317.jpg",
+        "image_path": "data/dataset/test/cats/cat.2317.jpg",
+        "predicted_label": "cats",
+        "prediction": "2.1460511e-12",
+        "rev": "workspace",
+        "true_label": "cats"
+    },
+    {
+        "image_name": "cat.2320.jpg",
+        "image_path": "data/dataset/test/cats/cat.2320.jpg",
+        "predicted_label": "cats",
+        "prediction": "0.010356548",
+        "rev": "workspace",
+        "true_label": "cats"
+    },
+    {
+        "image_name": "cat.2332.jpg",
+        "image_path": "data/dataset/test/cats/cat.2332.jpg",
+        "predicted_label": "cats",
+        "prediction": "5.442953e-09",
+        "rev": "workspace",
+        "true_label": "cats"
+    },
+    {
+        "image_name": "cat.2333.jpg",
+        "image_path": "data/dataset/test/cats/cat.2333.jpg",
+        "predicted_label": "cats",
+        "prediction": "1.475632e-10",
+        "rev": "workspace",
+        "true_label": "cats"
+    },
+    {
+        "image_name": "cat.2338.jpg",
+        "image_path": "data/dataset/test/cats/cat.2338.jpg",
+        "predicted_label": "cats",
+        "prediction": "1.0584502e-09",
+        "rev": "workspace",
+        "true_label": "cats"
+    },
+    {
+        "image_name": "cat.2339.jpg",
+        "image_path": "data/dataset/test/cats/cat.2339.jpg",
+        "predicted_label": "cats",
+        "prediction": "1.7207193e-10",
+        "rev": "workspace",
+        "true_label": "cats"
+    },
+    {
+        "image_name": "cat.2344.jpg",
+        "image_path": "data/dataset/test/cats/cat.2344.jpg",
+        "predicted_label": "cats",
+        "prediction": "0.011086873",
+        "rev": "workspace",
+        "true_label": "cats"
+    },
+    {
+        "image_name": "cat.2358.jpg",
+        "image_path": "data/dataset/test/cats/cat.2358.jpg",
+        "predicted_label": "cats",
+        "prediction": "0.2246586",
+        "rev": "workspace",
+        "true_label": "cats"
+    },
+    {
+        "image_name": "cat.2359.jpg",
+        "image_path": "data/dataset/test/cats/cat.2359.jpg",
+        "predicted_label": "cats",
+        "prediction": "2.812425e-07",
+        "rev": "workspace",
+        "true_label": "cats"
+    },
+    {
+        "image_name": "cat.2360.jpg",
+        "image_path": "data/dataset/test/cats/cat.2360.jpg",
+        "predicted_label": "cats",
+        "prediction": "2.7978052e-07",
+        "rev": "workspace",
+        "true_label": "cats"
+    },
+    {
+        "image_name": "cat.2365.jpg",
+        "image_path": "data/dataset/test/cats/cat.2365.jpg",
+        "predicted_label": "cats",
+        "prediction": "1.3879801e-09",
+        "rev": "workspace",
+        "true_label": "cats"
+    },
+    {
+        "image_name": "cat.2369.jpg",
+        "image_path": "data/dataset/test/cats/cat.2369.jpg",
+        "predicted_label": "cats",
+        "prediction": "6.3845382e-09",
+        "rev": "workspace",
+        "true_label": "cats"
+    },
+    {
+        "image_name": "cat.2370.jpg",
+        "image_path": "data/dataset/test/cats/cat.2370.jpg",
+        "predicted_label": "cats",
+        "prediction": "5.6563167e-11",
+        "rev": "workspace",
+        "true_label": "cats"
+    },
+    {
+        "image_name": "cat.2376.jpg",
+        "image_path": "data/dataset/test/cats/cat.2376.jpg",
+        "predicted_label": "cats",
+        "prediction": "5.459302e-11",
+        "rev": "workspace",
+        "true_label": "cats"
+    },
+    {
+        "image_name": "cat.2377.jpg",
+        "image_path": "data/dataset/test/cats/cat.2377.jpg",
+        "predicted_label": "cats",
+        "prediction": "1.5466939e-10",
+        "rev": "workspace",
+        "true_label": "cats"
+    },
+    {
+        "image_name": "cat.2380.jpg",
+        "image_path": "data/dataset/test/cats/cat.2380.jpg",
+        "predicted_label": "cats",
+        "prediction": "8.476537e-12",
+        "rev": "workspace",
+        "true_label": "cats"
+    },
+    {
+        "image_name": "cat.2381.jpg",
+        "image_path": "data/dataset/test/cats/cat.2381.jpg",
+        "predicted_label": "cats",
+        "prediction": "2.8148185e-07",
+        "rev": "workspace",
+        "true_label": "cats"
+    },
+    {
+        "image_name": "cat.2382.jpg",
+        "image_path": "data/dataset/test/cats/cat.2382.jpg",
+        "predicted_label": "cats",
+        "prediction": "1.5126398e-08",
+        "rev": "workspace",
+        "true_label": "cats"
+    },
+    {
+        "image_name": "cat.2391.jpg",
+        "image_path": "data/dataset/test/cats/cat.2391.jpg",
+        "predicted_label": "dogs",
+        "prediction": "0.85151726",
+        "rev": "workspace",
+        "true_label": "cats"
+    },
+    {
+        "image_name": "cat.2397.jpg",
+        "image_path": "data/dataset/test/cats/cat.2397.jpg",
+        "predicted_label": "cats",
+        "prediction": "3.943084e-08",
+        "rev": "workspace",
+        "true_label": "cats"
+    },
+    {
+        "image_name": "cat.2399.jpg",
+        "image_path": "data/dataset/test/cats/cat.2399.jpg",
+        "predicted_label": "cats",
+        "prediction": "6.780528e-11",
+        "rev": "workspace",
+        "true_label": "cats"
+    },
+    {
+        "image_name": "cat.2401.jpg",
+        "image_path": "data/dataset/test/cats/cat.2401.jpg",
+        "predicted_label": "cats",
+        "prediction": "1.2977355e-10",
+        "rev": "workspace",
+        "true_label": "cats"
+    },
+    {
+        "image_name": "cat.2416.jpg",
+        "image_path": "data/dataset/test/cats/cat.2416.jpg",
+        "predicted_label": "cats",
+        "prediction": "6.807073e-09",
+        "rev": "workspace",
+        "true_label": "cats"
+    },
+    {
+        "image_name": "cat.2422.jpg",
+        "image_path": "data/dataset/test/cats/cat.2422.jpg",
+        "predicted_label": "cats",
+        "prediction": "0.0052665174",
+        "rev": "workspace",
+        "true_label": "cats"
+    },
+    {
+        "image_name": "cat.2424.jpg",
+        "image_path": "data/dataset/test/cats/cat.2424.jpg",
+        "predicted_label": "cats",
+        "prediction": "2.30271e-06",
+        "rev": "workspace",
+        "true_label": "cats"
+    },
+    {
+        "image_name": "cat.2425.jpg",
+        "image_path": "data/dataset/test/cats/cat.2425.jpg",
+        "predicted_label": "cats",
+        "prediction": "1.375481e-08",
+        "rev": "workspace",
+        "true_label": "cats"
+    },
+    {
+        "image_name": "cat.2431.jpg",
+        "image_path": "data/dataset/test/cats/cat.2431.jpg",
+        "predicted_label": "cats",
+        "prediction": "2.5342445e-06",
+        "rev": "workspace",
+        "true_label": "cats"
+    },
+    {
+        "image_name": "cat.2444.jpg",
+        "image_path": "data/dataset/test/cats/cat.2444.jpg",
+        "predicted_label": "cats",
+        "prediction": "1.2640371e-06",
+        "rev": "workspace",
+        "true_label": "cats"
+    },
+    {
+        "image_name": "cat.2451.jpg",
+        "image_path": "data/dataset/test/cats/cat.2451.jpg",
+        "predicted_label": "cats",
+        "prediction": "3.8181236e-09",
+        "rev": "workspace",
+        "true_label": "cats"
+    },
+    {
+        "image_name": "cat.2453.jpg",
+        "image_path": "data/dataset/test/cats/cat.2453.jpg",
+        "predicted_label": "cats",
+        "prediction": "2.3891872e-10",
+        "rev": "workspace",
+        "true_label": "cats"
+    },
+    {
+        "image_name": "cat.2458.jpg",
+        "image_path": "data/dataset/test/cats/cat.2458.jpg",
+        "predicted_label": "cats",
+        "prediction": "4.833442e-09",
+        "rev": "workspace",
+        "true_label": "cats"
+    },
+    {
+        "image_name": "cat.2461.jpg",
+        "image_path": "data/dataset/test/cats/cat.2461.jpg",
+        "predicted_label": "cats",
+        "prediction": "2.2843e-06",
+        "rev": "workspace",
+        "true_label": "cats"
+    },
+    {
+        "image_name": "cat.2466.jpg",
+        "image_path": "data/dataset/test/cats/cat.2466.jpg",
+        "predicted_label": "cats",
+        "prediction": "1.7588249e-11",
+        "rev": "workspace",
+        "true_label": "cats"
+    },
+    {
+        "image_name": "cat.2469.jpg",
+        "image_path": "data/dataset/test/cats/cat.2469.jpg",
+        "predicted_label": "cats",
+        "prediction": "8.4158485e-09",
+        "rev": "workspace",
+        "true_label": "cats"
+    },
+    {
+        "image_name": "cat.2472.jpg",
+        "image_path": "data/dataset/test/cats/cat.2472.jpg",
+        "predicted_label": "dogs",
+        "prediction": "0.86342114",
+        "rev": "workspace",
+        "true_label": "cats"
+    },
+    {
+        "image_name": "cat.2473.jpg",
+        "image_path": "data/dataset/test/cats/cat.2473.jpg",
+        "predicted_label": "cats",
+        "prediction": "5.7056e-10",
+        "rev": "workspace",
+        "true_label": "cats"
+    },
+    {
+        "image_name": "cat.2474.jpg",
+        "image_path": "data/dataset/test/cats/cat.2474.jpg",
+        "predicted_label": "cats",
+        "prediction": "0.003908486",
+        "rev": "workspace",
+        "true_label": "cats"
+    },
+    {
+        "image_name": "cat.2475.jpg",
+        "image_path": "data/dataset/test/cats/cat.2475.jpg",
+        "predicted_label": "cats",
+        "prediction": "0.20931722",
+        "rev": "workspace",
+        "true_label": "cats"
+    },
+    {
+        "image_name": "cat.2476.jpg",
+        "image_path": "data/dataset/test/cats/cat.2476.jpg",
+        "predicted_label": "dogs",
+        "prediction": "0.992385",
+        "rev": "workspace",
+        "true_label": "cats"
+    },
+    {
+        "image_name": "cat.2477.jpg",
+        "image_path": "data/dataset/test/cats/cat.2477.jpg",
+        "predicted_label": "cats",
+        "prediction": "5.758471e-10",
+        "rev": "workspace",
+        "true_label": "cats"
+    },
+    {
+        "image_name": "cat.2489.jpg",
+        "image_path": "data/dataset/test/cats/cat.2489.jpg",
+        "predicted_label": "cats",
+        "prediction": "4.9592153e-08",
+        "rev": "workspace",
+        "true_label": "cats"
+    },
+    {
+        "image_name": "cat.2493.jpg",
+        "image_path": "data/dataset/test/cats/cat.2493.jpg",
+        "predicted_label": "cats",
+        "prediction": "8.454675e-08",
+        "rev": "workspace",
+        "true_label": "cats"
+    },
+    {
+        "image_name": "cat.2494.jpg",
+        "image_path": "data/dataset/test/cats/cat.2494.jpg",
+        "predicted_label": "cats",
+        "prediction": "0.013584546",
+        "rev": "workspace",
+        "true_label": "cats"
+    },
+    {
+        "image_name": "dog.2000.jpg",
+        "image_path": "data/dataset/test/dogs/dog.2000.jpg",
+        "predicted_label": "dogs",
+        "prediction": "1.0",
+        "rev": "workspace",
+        "true_label": "dogs"
+    },
+    {
+        "image_name": "dog.2003.jpg",
+        "image_path": "data/dataset/test/dogs/dog.2003.jpg",
+        "predicted_label": "dogs",
+        "prediction": "0.9999995",
+        "rev": "workspace",
+        "true_label": "dogs"
+    },
+    {
+        "image_name": "dog.2007.jpg",
+        "image_path": "data/dataset/test/dogs/dog.2007.jpg",
+        "predicted_label": "dogs",
+        "prediction": "1.0",
+        "rev": "workspace",
+        "true_label": "dogs"
+    },
+    {
+        "image_name": "dog.2008.jpg",
+        "image_path": "data/dataset/test/dogs/dog.2008.jpg",
+        "predicted_label": "dogs",
+        "prediction": "1.0",
+        "rev": "workspace",
+        "true_label": "dogs"
+    },
+    {
+        "image_name": "dog.2009.jpg",
+        "image_path": "data/dataset/test/dogs/dog.2009.jpg",
+        "predicted_label": "dogs",
+        "prediction": "0.9723378",
+        "rev": "workspace",
+        "true_label": "dogs"
+    },
+    {
+        "image_name": "dog.2013.jpg",
+        "image_path": "data/dataset/test/dogs/dog.2013.jpg",
+        "predicted_label": "dogs",
+        "prediction": "1.0",
+        "rev": "workspace",
+        "true_label": "dogs"
+    },
+    {
+        "image_name": "dog.2014.jpg",
+        "image_path": "data/dataset/test/dogs/dog.2014.jpg",
+        "predicted_label": "dogs",
+        "prediction": "1.0",
+        "rev": "workspace",
+        "true_label": "dogs"
+    },
+    {
+        "image_name": "dog.2022.jpg",
+        "image_path": "data/dataset/test/dogs/dog.2022.jpg",
+        "predicted_label": "dogs",
+        "prediction": "1.0",
+        "rev": "workspace",
+        "true_label": "dogs"
+    },
+    {
+        "image_name": "dog.2024.jpg",
+        "image_path": "data/dataset/test/dogs/dog.2024.jpg",
+        "predicted_label": "dogs",
+        "prediction": "0.9999962",
+        "rev": "workspace",
+        "true_label": "dogs"
+    },
+    {
+        "image_name": "dog.2026.jpg",
+        "image_path": "data/dataset/test/dogs/dog.2026.jpg",
+        "predicted_label": "dogs",
+        "prediction": "1.0",
+        "rev": "workspace",
+        "true_label": "dogs"
+    },
+    {
+        "image_name": "dog.2029.jpg",
+        "image_path": "data/dataset/test/dogs/dog.2029.jpg",
+        "predicted_label": "dogs",
+        "prediction": "1.0",
+        "rev": "workspace",
+        "true_label": "dogs"
+    },
+    {
+        "image_name": "dog.2033.jpg",
+        "image_path": "data/dataset/test/dogs/dog.2033.jpg",
+        "predicted_label": "dogs",
+        "prediction": "1.0",
+        "rev": "workspace",
+        "true_label": "dogs"
+    },
+    {
+        "image_name": "dog.2043.jpg",
+        "image_path": "data/dataset/test/dogs/dog.2043.jpg",
+        "predicted_label": "dogs",
+        "prediction": "1.0",
+        "rev": "workspace",
+        "true_label": "dogs"
+    },
+    {
+        "image_name": "dog.2047.jpg",
+        "image_path": "data/dataset/test/dogs/dog.2047.jpg",
+        "predicted_label": "dogs",
+        "prediction": "1.0",
+        "rev": "workspace",
+        "true_label": "dogs"
+    },
+    {
+        "image_name": "dog.2053.jpg",
+        "image_path": "data/dataset/test/dogs/dog.2053.jpg",
+        "predicted_label": "dogs",
+        "prediction": "0.99999976",
+        "rev": "workspace",
+        "true_label": "dogs"
+    },
+    {
+        "image_name": "dog.2057.jpg",
+        "image_path": "data/dataset/test/dogs/dog.2057.jpg",
+        "predicted_label": "dogs",
+        "prediction": "0.998543",
+        "rev": "workspace",
+        "true_label": "dogs"
+    },
+    {
+        "image_name": "dog.2060.jpg",
+        "image_path": "data/dataset/test/dogs/dog.2060.jpg",
+        "predicted_label": "dogs",
+        "prediction": "0.9999993",
+        "rev": "workspace",
+        "true_label": "dogs"
+    },
+    {
+        "image_name": "dog.2061.jpg",
+        "image_path": "data/dataset/test/dogs/dog.2061.jpg",
+        "predicted_label": "dogs",
+        "prediction": "1.0",
+        "rev": "workspace",
+        "true_label": "dogs"
+    },
+    {
+        "image_name": "dog.2062.jpg",
+        "image_path": "data/dataset/test/dogs/dog.2062.jpg",
+        "predicted_label": "dogs",
+        "prediction": "1.0",
+        "rev": "workspace",
+        "true_label": "dogs"
+    },
+    {
+        "image_name": "dog.2063.jpg",
+        "image_path": "data/dataset/test/dogs/dog.2063.jpg",
+        "predicted_label": "dogs",
+        "prediction": "0.99999917",
+        "rev": "workspace",
+        "true_label": "dogs"
+    },
+    {
+        "image_name": "dog.2072.jpg",
+        "image_path": "data/dataset/test/dogs/dog.2072.jpg",
+        "predicted_label": "dogs",
+        "prediction": "0.9999995",
+        "rev": "workspace",
+        "true_label": "dogs"
+    },
+    {
+        "image_name": "dog.2074.jpg",
+        "image_path": "data/dataset/test/dogs/dog.2074.jpg",
+        "predicted_label": "dogs",
+        "prediction": "1.0",
+        "rev": "workspace",
+        "true_label": "dogs"
+    },
+    {
+        "image_name": "dog.2076.jpg",
+        "image_path": "data/dataset/test/dogs/dog.2076.jpg",
+        "predicted_label": "dogs",
+        "prediction": "0.9999999",
+        "rev": "workspace",
+        "true_label": "dogs"
+    },
+    {
+        "image_name": "dog.2079.jpg",
+        "image_path": "data/dataset/test/dogs/dog.2079.jpg",
+        "predicted_label": "dogs",
+        "prediction": "1.0",
+        "rev": "workspace",
+        "true_label": "dogs"
+    },
+    {
+        "image_name": "dog.2082.jpg",
+        "image_path": "data/dataset/test/dogs/dog.2082.jpg",
+        "predicted_label": "dogs",
+        "prediction": "0.99985766",
+        "rev": "workspace",
+        "true_label": "dogs"
+    },
+    {
+        "image_name": "dog.2087.jpg",
+        "image_path": "data/dataset/test/dogs/dog.2087.jpg",
+        "predicted_label": "dogs",
+        "prediction": "1.0",
+        "rev": "workspace",
+        "true_label": "dogs"
+    },
+    {
+        "image_name": "dog.2100.jpg",
+        "image_path": "data/dataset/test/dogs/dog.2100.jpg",
+        "predicted_label": "dogs",
+        "prediction": "1.0",
+        "rev": "workspace",
+        "true_label": "dogs"
+    },
+    {
+        "image_name": "dog.2101.jpg",
+        "image_path": "data/dataset/test/dogs/dog.2101.jpg",
+        "predicted_label": "dogs",
+        "prediction": "1.0",
+        "rev": "workspace",
+        "true_label": "dogs"
+    },
+    {
+        "image_name": "dog.2104.jpg",
+        "image_path": "data/dataset/test/dogs/dog.2104.jpg",
+        "predicted_label": "dogs",
+        "prediction": "1.0",
+        "rev": "workspace",
+        "true_label": "dogs"
+    },
+    {
+        "image_name": "dog.2105.jpg",
+        "image_path": "data/dataset/test/dogs/dog.2105.jpg",
+        "predicted_label": "dogs",
+        "prediction": "0.99999785",
+        "rev": "workspace",
+        "true_label": "dogs"
+    },
+    {
+        "image_name": "dog.2109.jpg",
+        "image_path": "data/dataset/test/dogs/dog.2109.jpg",
+        "predicted_label": "dogs",
+        "prediction": "1.0",
+        "rev": "workspace",
+        "true_label": "dogs"
+    },
+    {
+        "image_name": "dog.2112.jpg",
+        "image_path": "data/dataset/test/dogs/dog.2112.jpg",
+        "predicted_label": "dogs",
+        "prediction": "1.0",
+        "rev": "workspace",
+        "true_label": "dogs"
+    },
+    {
+        "image_name": "dog.2113.jpg",
+        "image_path": "data/dataset/test/dogs/dog.2113.jpg",
+        "predicted_label": "dogs",
+        "prediction": "0.9999738",
+        "rev": "workspace",
+        "true_label": "dogs"
+    },
+    {
+        "image_name": "dog.2120.jpg",
+        "image_path": "data/dataset/test/dogs/dog.2120.jpg",
+        "predicted_label": "dogs",
+        "prediction": "1.0",
+        "rev": "workspace",
+        "true_label": "dogs"
+    },
+    {
+        "image_name": "dog.2121.jpg",
+        "image_path": "data/dataset/test/dogs/dog.2121.jpg",
+        "predicted_label": "dogs",
+        "prediction": "0.9999901",
+        "rev": "workspace",
+        "true_label": "dogs"
+    },
+    {
+        "image_name": "dog.2123.jpg",
+        "image_path": "data/dataset/test/dogs/dog.2123.jpg",
+        "predicted_label": "dogs",
+        "prediction": "1.0",
+        "rev": "workspace",
+        "true_label": "dogs"
+    },
+    {
+        "image_name": "dog.2129.jpg",
+        "image_path": "data/dataset/test/dogs/dog.2129.jpg",
+        "predicted_label": "dogs",
+        "prediction": "1.0",
+        "rev": "workspace",
+        "true_label": "dogs"
+    },
+    {
+        "image_name": "dog.2134.jpg",
+        "image_path": "data/dataset/test/dogs/dog.2134.jpg",
+        "predicted_label": "dogs",
+        "prediction": "1.0",
+        "rev": "workspace",
+        "true_label": "dogs"
+    },
+    {
+        "image_name": "dog.2135.jpg",
+        "image_path": "data/dataset/test/dogs/dog.2135.jpg",
+        "predicted_label": "dogs",
+        "prediction": "1.0",
+        "rev": "workspace",
+        "true_label": "dogs"
+    },
+    {
+        "image_name": "dog.2144.jpg",
+        "image_path": "data/dataset/test/dogs/dog.2144.jpg",
+        "predicted_label": "dogs",
+        "prediction": "1.0",
+        "rev": "workspace",
+        "true_label": "dogs"
+    },
+    {
+        "image_name": "dog.2145.jpg",
+        "image_path": "data/dataset/test/dogs/dog.2145.jpg",
+        "predicted_label": "dogs",
+        "prediction": "1.0",
+        "rev": "workspace",
+        "true_label": "dogs"
+    },
+    {
+        "image_name": "dog.2148.jpg",
+        "image_path": "data/dataset/test/dogs/dog.2148.jpg",
+        "predicted_label": "dogs",
+        "prediction": "1.0",
+        "rev": "workspace",
+        "true_label": "dogs"
+    },
+    {
+        "image_name": "dog.2150.jpg",
+        "image_path": "data/dataset/test/dogs/dog.2150.jpg",
+        "predicted_label": "dogs",
+        "prediction": "1.0",
+        "rev": "workspace",
+        "true_label": "dogs"
+    },
+    {
+        "image_name": "dog.2155.jpg",
+        "image_path": "data/dataset/test/dogs/dog.2155.jpg",
+        "predicted_label": "dogs",
+        "prediction": "0.9999962",
+        "rev": "workspace",
+        "true_label": "dogs"
+    },
+    {
+        "image_name": "dog.2162.jpg",
+        "image_path": "data/dataset/test/dogs/dog.2162.jpg",
+        "predicted_label": "dogs",
+        "prediction": "1.0",
+        "rev": "workspace",
+        "true_label": "dogs"
+    },
+    {
+        "image_name": "dog.2163.jpg",
+        "image_path": "data/dataset/test/dogs/dog.2163.jpg",
+        "predicted_label": "dogs",
+        "prediction": "0.99999917",
+        "rev": "workspace",
+        "true_label": "dogs"
+    },
+    {
+        "image_name": "dog.2165.jpg",
+        "image_path": "data/dataset/test/dogs/dog.2165.jpg",
+        "predicted_label": "dogs",
+        "prediction": "1.0",
+        "rev": "workspace",
+        "true_label": "dogs"
+    },
+    {
+        "image_name": "dog.2166.jpg",
+        "image_path": "data/dataset/test/dogs/dog.2166.jpg",
+        "predicted_label": "dogs",
+        "prediction": "1.0",
+        "rev": "workspace",
+        "true_label": "dogs"
+    },
+    {
+        "image_name": "dog.2172.jpg",
+        "image_path": "data/dataset/test/dogs/dog.2172.jpg",
+        "predicted_label": "dogs",
+        "prediction": "1.0",
+        "rev": "workspace",
+        "true_label": "dogs"
+    },
+    {
+        "image_name": "dog.2178.jpg",
+        "image_path": "data/dataset/test/dogs/dog.2178.jpg",
+        "predicted_label": "dogs",
+        "prediction": "1.0",
+        "rev": "workspace",
+        "true_label": "dogs"
+    },
+    {
+        "image_name": "dog.2179.jpg",
+        "image_path": "data/dataset/test/dogs/dog.2179.jpg",
+        "predicted_label": "dogs",
+        "prediction": "1.0",
+        "rev": "workspace",
+        "true_label": "dogs"
+    },
+    {
+        "image_name": "dog.2183.jpg",
+        "image_path": "data/dataset/test/dogs/dog.2183.jpg",
+        "predicted_label": "dogs",
+        "prediction": "0.9999945",
+        "rev": "workspace",
+        "true_label": "dogs"
+    },
+    {
+        "image_name": "dog.2189.jpg",
+        "image_path": "data/dataset/test/dogs/dog.2189.jpg",
+        "predicted_label": "dogs",
+        "prediction": "1.0",
+        "rev": "workspace",
+        "true_label": "dogs"
+    },
+    {
+        "image_name": "dog.2195.jpg",
+        "image_path": "data/dataset/test/dogs/dog.2195.jpg",
+        "predicted_label": "dogs",
+        "prediction": "0.9999999",
+        "rev": "workspace",
+        "true_label": "dogs"
+    },
+    {
+        "image_name": "dog.2206.jpg",
+        "image_path": "data/dataset/test/dogs/dog.2206.jpg",
+        "predicted_label": "dogs",
+        "prediction": "1.0",
+        "rev": "workspace",
+        "true_label": "dogs"
+    },
+    {
+        "image_name": "dog.2212.jpg",
+        "image_path": "data/dataset/test/dogs/dog.2212.jpg",
+        "predicted_label": "dogs",
+        "prediction": "0.99999976",
+        "rev": "workspace",
+        "true_label": "dogs"
+    },
+    {
+        "image_name": "dog.2218.jpg",
+        "image_path": "data/dataset/test/dogs/dog.2218.jpg",
+        "predicted_label": "dogs",
+        "prediction": "0.99999976",
+        "rev": "workspace",
+        "true_label": "dogs"
+    },
+    {
+        "image_name": "dog.2230.jpg",
+        "image_path": "data/dataset/test/dogs/dog.2230.jpg",
+        "predicted_label": "dogs",
+        "prediction": "1.0",
+        "rev": "workspace",
+        "true_label": "dogs"
+    },
+    {
+        "image_name": "dog.2237.jpg",
+        "image_path": "data/dataset/test/dogs/dog.2237.jpg",
+        "predicted_label": "dogs",
+        "prediction": "1.0",
+        "rev": "workspace",
+        "true_label": "dogs"
+    },
+    {
+        "image_name": "dog.2244.jpg",
+        "image_path": "data/dataset/test/dogs/dog.2244.jpg",
+        "predicted_label": "dogs",
+        "prediction": "1.0",
+        "rev": "workspace",
+        "true_label": "dogs"
+    },
+    {
+        "image_name": "dog.2247.jpg",
+        "image_path": "data/dataset/test/dogs/dog.2247.jpg",
+        "predicted_label": "dogs",
+        "prediction": "0.9999919",
+        "rev": "workspace",
+        "true_label": "dogs"
+    },
+    {
+        "image_name": "dog.2250.jpg",
+        "image_path": "data/dataset/test/dogs/dog.2250.jpg",
+        "predicted_label": "dogs",
+        "prediction": "0.9999994",
+        "rev": "workspace",
+        "true_label": "dogs"
+    },
+    {
+        "image_name": "dog.2252.jpg",
+        "image_path": "data/dataset/test/dogs/dog.2252.jpg",
+        "predicted_label": "dogs",
+        "prediction": "1.0",
+        "rev": "workspace",
+        "true_label": "dogs"
+    },
+    {
+        "image_name": "dog.2260.jpg",
+        "image_path": "data/dataset/test/dogs/dog.2260.jpg",
+        "predicted_label": "dogs",
+        "prediction": "1.0",
+        "rev": "workspace",
+        "true_label": "dogs"
+    },
+    {
+        "image_name": "dog.2261.jpg",
+        "image_path": "data/dataset/test/dogs/dog.2261.jpg",
+        "predicted_label": "dogs",
+        "prediction": "1.0",
+        "rev": "workspace",
+        "true_label": "dogs"
+    },
+    {
+        "image_name": "dog.2272.jpg",
+        "image_path": "data/dataset/test/dogs/dog.2272.jpg",
+        "predicted_label": "dogs",
+        "prediction": "1.0",
+        "rev": "workspace",
+        "true_label": "dogs"
+    },
+    {
+        "image_name": "dog.2276.jpg",
+        "image_path": "data/dataset/test/dogs/dog.2276.jpg",
+        "predicted_label": "dogs",
+        "prediction": "1.0",
+        "rev": "workspace",
+        "true_label": "dogs"
+    },
+    {
+        "image_name": "dog.2281.jpg",
+        "image_path": "data/dataset/test/dogs/dog.2281.jpg",
+        "predicted_label": "dogs",
+        "prediction": "0.9999999",
+        "rev": "workspace",
+        "true_label": "dogs"
+    },
+    {
+        "image_name": "dog.2290.jpg",
+        "image_path": "data/dataset/test/dogs/dog.2290.jpg",
+        "predicted_label": "dogs",
+        "prediction": "1.0",
+        "rev": "workspace",
+        "true_label": "dogs"
+    },
+    {
+        "image_name": "dog.2296.jpg",
+        "image_path": "data/dataset/test/dogs/dog.2296.jpg",
+        "predicted_label": "dogs",
+        "prediction": "1.0",
+        "rev": "workspace",
+        "true_label": "dogs"
+    },
+    {
+        "image_name": "dog.2298.jpg",
+        "image_path": "data/dataset/test/dogs/dog.2298.jpg",
+        "predicted_label": "dogs",
+        "prediction": "1.0",
+        "rev": "workspace",
+        "true_label": "dogs"
+    },
+    {
+        "image_name": "dog.2299.jpg",
+        "image_path": "data/dataset/test/dogs/dog.2299.jpg",
+        "predicted_label": "dogs",
+        "prediction": "1.0",
+        "rev": "workspace",
+        "true_label": "dogs"
+    },
+    {
+        "image_name": "dog.2306.jpg",
+        "image_path": "data/dataset/test/dogs/dog.2306.jpg",
+        "predicted_label": "dogs",
+        "prediction": "1.0",
+        "rev": "workspace",
+        "true_label": "dogs"
+    },
+    {
+        "image_name": "dog.2311.jpg",
+        "image_path": "data/dataset/test/dogs/dog.2311.jpg",
+        "predicted_label": "dogs",
+        "prediction": "1.0",
+        "rev": "workspace",
+        "true_label": "dogs"
+    },
+    {
+        "image_name": "dog.2314.jpg",
+        "image_path": "data/dataset/test/dogs/dog.2314.jpg",
+        "predicted_label": "dogs",
+        "prediction": "0.9992506",
+        "rev": "workspace",
+        "true_label": "dogs"
+    },
+    {
+        "image_name": "dog.2320.jpg",
+        "image_path": "data/dataset/test/dogs/dog.2320.jpg",
+        "predicted_label": "dogs",
+        "prediction": "0.9999993",
+        "rev": "workspace",
+        "true_label": "dogs"
+    },
+    {
+        "image_name": "dog.2323.jpg",
+        "image_path": "data/dataset/test/dogs/dog.2323.jpg",
+        "predicted_label": "dogs",
+        "prediction": "0.9999999",
+        "rev": "workspace",
+        "true_label": "dogs"
+    },
+    {
+        "image_name": "dog.2328.jpg",
+        "image_path": "data/dataset/test/dogs/dog.2328.jpg",
+        "predicted_label": "dogs",
+        "prediction": "1.0",
+        "rev": "workspace",
+        "true_label": "dogs"
+    },
+    {
+        "image_name": "dog.2332.jpg",
+        "image_path": "data/dataset/test/dogs/dog.2332.jpg",
+        "predicted_label": "dogs",
+        "prediction": "1.0",
+        "rev": "workspace",
+        "true_label": "dogs"
+    },
+    {
+        "image_name": "dog.2333.jpg",
+        "image_path": "data/dataset/test/dogs/dog.2333.jpg",
+        "predicted_label": "dogs",
+        "prediction": "0.9999536",
+        "rev": "workspace",
+        "true_label": "dogs"
+    },
+    {
+        "image_name": "dog.2338.jpg",
+        "image_path": "data/dataset/test/dogs/dog.2338.jpg",
+        "predicted_label": "dogs",
+        "prediction": "0.9999989",
+        "rev": "workspace",
+        "true_label": "dogs"
+    },
+    {
+        "image_name": "dog.2346.jpg",
+        "image_path": "data/dataset/test/dogs/dog.2346.jpg",
+        "predicted_label": "dogs",
+        "prediction": "1.0",
+        "rev": "workspace",
+        "true_label": "dogs"
+    },
+    {
+        "image_name": "dog.2349.jpg",
+        "image_path": "data/dataset/test/dogs/dog.2349.jpg",
+        "predicted_label": "dogs",
+        "prediction": "1.0",
+        "rev": "workspace",
+        "true_label": "dogs"
+    },
+    {
+        "image_name": "dog.2352.jpg",
+        "image_path": "data/dataset/test/dogs/dog.2352.jpg",
+        "predicted_label": "dogs",
+        "prediction": "1.0",
+        "rev": "workspace",
+        "true_label": "dogs"
+    },
+    {
+        "image_name": "dog.2354.jpg",
+        "image_path": "data/dataset/test/dogs/dog.2354.jpg",
+        "predicted_label": "dogs",
+        "prediction": "0.99999976",
+        "rev": "workspace",
+        "true_label": "dogs"
+    },
+    {
+        "image_name": "dog.2355.jpg",
+        "image_path": "data/dataset/test/dogs/dog.2355.jpg",
+        "predicted_label": "dogs",
+        "prediction": "1.0",
+        "rev": "workspace",
+        "true_label": "dogs"
+    },
+    {
+        "image_name": "dog.2356.jpg",
+        "image_path": "data/dataset/test/dogs/dog.2356.jpg",
+        "predicted_label": "dogs",
+        "prediction": "1.0",
+        "rev": "workspace",
+        "true_label": "dogs"
+    },
+    {
+        "image_name": "dog.2361.jpg",
+        "image_path": "data/dataset/test/dogs/dog.2361.jpg",
+        "predicted_label": "dogs",
+        "prediction": "0.99999833",
+        "rev": "workspace",
+        "true_label": "dogs"
+    },
+    {
+        "image_name": "dog.2362.jpg",
+        "image_path": "data/dataset/test/dogs/dog.2362.jpg",
+        "predicted_label": "dogs",
+        "prediction": "0.9978229",
+        "rev": "workspace",
+        "true_label": "dogs"
+    },
+    {
+        "image_name": "dog.2367.jpg",
+        "image_path": "data/dataset/test/dogs/dog.2367.jpg",
+        "predicted_label": "dogs",
+        "prediction": "1.0",
+        "rev": "workspace",
+        "true_label": "dogs"
+    },
+    {
+        "image_name": "dog.2371.jpg",
+        "image_path": "data/dataset/test/dogs/dog.2371.jpg",
+        "predicted_label": "dogs",
+        "prediction": "1.0",
+        "rev": "workspace",
+        "true_label": "dogs"
+    },
+    {
+        "image_name": "dog.2378.jpg",
+        "image_path": "data/dataset/test/dogs/dog.2378.jpg",
+        "predicted_label": "dogs",
+        "prediction": "0.9999989",
+        "rev": "workspace",
+        "true_label": "dogs"
+    },
+    {
+        "image_name": "dog.2379.jpg",
+        "image_path": "data/dataset/test/dogs/dog.2379.jpg",
+        "predicted_label": "dogs",
+        "prediction": "1.0",
+        "rev": "workspace",
+        "true_label": "dogs"
+    },
+    {
+        "image_name": "dog.2393.jpg",
+        "image_path": "data/dataset/test/dogs/dog.2393.jpg",
+        "predicted_label": "dogs",
+        "prediction": "1.0",
+        "rev": "workspace",
+        "true_label": "dogs"
+    },
+    {
+        "image_name": "dog.2394.jpg",
+        "image_path": "data/dataset/test/dogs/dog.2394.jpg",
+        "predicted_label": "dogs",
+        "prediction": "1.0",
+        "rev": "workspace",
+        "true_label": "dogs"
+    },
+    {
+        "image_name": "dog.2398.jpg",
+        "image_path": "data/dataset/test/dogs/dog.2398.jpg",
+        "predicted_label": "dogs",
+        "prediction": "0.99999964",
+        "rev": "workspace",
+        "true_label": "dogs"
+    },
+    {
+        "image_name": "dog.2400.jpg",
+        "image_path": "data/dataset/test/dogs/dog.2400.jpg",
+        "predicted_label": "dogs",
+        "prediction": "1.0",
+        "rev": "workspace",
+        "true_label": "dogs"
+    },
+    {
+        "image_name": "dog.2402.jpg",
+        "image_path": "data/dataset/test/dogs/dog.2402.jpg",
+        "predicted_label": "dogs",
+        "prediction": "1.0",
+        "rev": "workspace",
+        "true_label": "dogs"
+    },
+    {
+        "image_name": "dog.2415.jpg",
+        "image_path": "data/dataset/test/dogs/dog.2415.jpg",
+        "predicted_label": "dogs",
+        "prediction": "0.99999917",
+        "rev": "workspace",
+        "true_label": "dogs"
+    },
+    {
+        "image_name": "dog.2418.jpg",
+        "image_path": "data/dataset/test/dogs/dog.2418.jpg",
+        "predicted_label": "dogs",
+        "prediction": "0.9999999",
+        "rev": "workspace",
+        "true_label": "dogs"
+    },
+    {
+        "image_name": "dog.2423.jpg",
+        "image_path": "data/dataset/test/dogs/dog.2423.jpg",
+        "predicted_label": "dogs",
+        "prediction": "0.9999907",
+        "rev": "workspace",
+        "true_label": "dogs"
+    },
+    {
+        "image_name": "dog.2430.jpg",
+        "image_path": "data/dataset/test/dogs/dog.2430.jpg",
+        "predicted_label": "dogs",
+        "prediction": "0.99999905",
+        "rev": "workspace",
+        "true_label": "dogs"
+    },
+    {
+        "image_name": "dog.2442.jpg",
+        "image_path": "data/dataset/test/dogs/dog.2442.jpg",
+        "predicted_label": "dogs",
+        "prediction": "0.99971026",
+        "rev": "workspace",
+        "true_label": "dogs"
+    },
+    {
+        "image_name": "dog.2443.jpg",
+        "image_path": "data/dataset/test/dogs/dog.2443.jpg",
+        "predicted_label": "dogs",
+        "prediction": "0.99777526",
+        "rev": "workspace",
+        "true_label": "dogs"
+    },
+    {
+        "image_name": "dog.2444.jpg",
+        "image_path": "data/dataset/test/dogs/dog.2444.jpg",
+        "predicted_label": "dogs",
+        "prediction": "1.0",
+        "rev": "workspace",
+        "true_label": "dogs"
+    },
+    {
+        "image_name": "dog.2448.jpg",
+        "image_path": "data/dataset/test/dogs/dog.2448.jpg",
+        "predicted_label": "dogs",
+        "prediction": "0.9999999",
+        "rev": "workspace",
+        "true_label": "dogs"
+    },
+    {
+        "image_name": "dog.2451.jpg",
+        "image_path": "data/dataset/test/dogs/dog.2451.jpg",
+        "predicted_label": "dogs",
+        "prediction": "0.99999976",
+        "rev": "workspace",
+        "true_label": "dogs"
+    },
+    {
+        "image_name": "dog.2459.jpg",
+        "image_path": "data/dataset/test/dogs/dog.2459.jpg",
+        "predicted_label": "dogs",
+        "prediction": "0.9999989",
+        "rev": "workspace",
+        "true_label": "dogs"
+    },
+    {
+        "image_name": "dog.2470.jpg",
+        "image_path": "data/dataset/test/dogs/dog.2470.jpg",
+        "predicted_label": "dogs",
+        "prediction": "1.0",
+        "rev": "workspace",
+        "true_label": "dogs"
+    },
+    {
+        "image_name": "dog.2471.jpg",
+        "image_path": "data/dataset/test/dogs/dog.2471.jpg",
+        "predicted_label": "dogs",
+        "prediction": "1.0",
+        "rev": "workspace",
+        "true_label": "dogs"
+    },
+    {
+        "image_name": "dog.2474.jpg",
+        "image_path": "data/dataset/test/dogs/dog.2474.jpg",
+        "predicted_label": "dogs",
+        "prediction": "0.99999976",
+        "rev": "workspace",
+        "true_label": "dogs"
+    },
+    {
+        "image_name": "dog.2475.jpg",
+        "image_path": "data/dataset/test/dogs/dog.2475.jpg",
+        "predicted_label": "dogs",
+        "prediction": "1.0",
+        "rev": "workspace",
+        "true_label": "dogs"
+    },
+    {
+        "image_name": "dog.2477.jpg",
+        "image_path": "data/dataset/test/dogs/dog.2477.jpg",
+        "predicted_label": "dogs",
+        "prediction": "1.0",
+        "rev": "workspace",
+        "true_label": "dogs"
+    },
+    {
+        "image_name": "dog.2478.jpg",
+        "image_path": "data/dataset/test/dogs/dog.2478.jpg",
+        "predicted_label": "dogs",
+        "prediction": "0.97790146",
+        "rev": "workspace",
+        "true_label": "dogs"
+    },
+    {
+        "image_name": "dog.2479.jpg",
+        "image_path": "data/dataset/test/dogs/dog.2479.jpg",
+        "predicted_label": "dogs",
+        "prediction": "1.0",
+        "rev": "workspace",
+        "true_label": "dogs"
+    },
+    {
+        "image_name": "dog.2487.jpg",
+        "image_path": "data/dataset/test/dogs/dog.2487.jpg",
+        "predicted_label": "dogs",
+        "prediction": "1.0",
+        "rev": "workspace",
+        "true_label": "dogs"
+    },
+    {
+        "image_name": "dog.2496.jpg",
+        "image_path": "data/dataset/test/dogs/dog.2496.jpg",
+        "predicted_label": "dogs",
+        "prediction": "1.0",
+        "rev": "workspace",
+        "true_label": "dogs"
+    },
+    {
+        "image_name": "dog.2499.jpg",
+        "image_path": "data/dataset/test/dogs/dog.2499.jpg",
+        "predicted_label": "dogs",
+        "prediction": "1.0",
+        "rev": "workspace",
+        "true_label": "dogs"
+    }
+]
+    },
+    "title": "Confusion Matrix",
+    "facet": {
+        "field": "rev",
+        "type": "nominal"
+    },
+    "spec": {
+        "transform": [
+            {
+                "aggregate": [
+                    {
+                        "op": "count",
+                        "as": "xy_count"
+                    }
+                ],
+                "groupby": [
+                    "predicted_label",
+                    "true_label"
+                ]
+            },
+            {
+                "impute": "xy_count",
+                "groupby": [
+                    "rev",
+                    "predicted_label"
+                ],
+                "key": "true_label",
+                "value": 0
+            },
+            {
+                "impute": "xy_count",
+                "groupby": [
+                    "rev",
+                    "true_label"
+                ],
+                "key": "predicted_label",
+                "value": 0
+            },
+            {
+                "joinaggregate": [
+                    {
+                        "op": "max",
+                        "field": "xy_count",
+                        "as": "max_count"
+                    }
+                ],
+                "groupby": []
+            },
+            {
+                "calculate": "datum.xy_count / datum.max_count",
+                "as": "percent_of_max"
+            }
+        ],
+        "encoding": {
+            "x": {
+                "field": "true_label",
+                "type": "nominal",
+                "sort": "ascending",
+                "title": "true_label"
+            },
+            "y": {
+                "field": "predicted_label",
+                "type": "nominal",
+                "sort": "ascending",
+                "title": "predicted_label"
+            }
+        },
+        "layer": [
+            {
+                "mark": "rect",
+                "width": 300,
+                "height": 300,
+                "encoding": {
+                    "color": {
+                        "field": "xy_count",
+                        "type": "quantitative",
+                        "title": "",
+                        "scale": {
+                            "domainMin": 0,
+                            "nice": true
+                        }
+                    }
+                }
+            },
+            {
+                "mark": "text",
+                "encoding": {
+                    "text": {
+                        "field": "xy_count",
+                        "type": "quantitative"
+                    },
+                    "color": {
+                        "condition": {
+                            "test": "datum.percent_of_max > 0.5",
+                            "value": "white"
+                        },
+                        "value": "black"
+                    }
+                }
+            }
+        ]
+    }
+}
+;
+    vegaEmbed('#plot0', spec);
+</script>
+</body>
+</html>
