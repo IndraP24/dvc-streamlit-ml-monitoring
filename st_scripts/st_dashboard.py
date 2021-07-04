@@ -1,5 +1,7 @@
 import streamlit as st
 
+from st_scripts.st_list_model import st_list_model
+
 st.set_page_config(
     page_title="DVC + Streamlit = ❤",
     initial_sidebar_state="expanded",
@@ -25,4 +27,5 @@ action = st.sidebar.selectbox(
 
 print("Selected dashboard actions: ", action)
 
-#if action == DashboardActions.MODEL_LIST
+if action == DashboardActions.MODEL_LIST:
+    st_list_model
