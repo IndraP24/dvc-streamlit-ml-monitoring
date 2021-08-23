@@ -221,7 +221,7 @@ nest-asyncio==1.5.1
     # via nbclient
 networkx==2.5.1
     # via dvc
-notebook==6.4.0
+notebook==6.4.1
     # via widgetsnbextension
 numpy==1.19.5
     # via
